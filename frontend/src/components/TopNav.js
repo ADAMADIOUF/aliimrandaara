@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaFacebookF, FaTwitter, FaInstagram, FaMosque } from 'react-icons/fa'
+import Translate from './Translate'
 
 
 const TopNav = () => {
@@ -32,7 +33,9 @@ const TopNav = () => {
 
 
       <span>{formatFullDate(time)}</span>
-
+<span>
+  <Translate/>
+</span>
       <div className="social-icons">
         <a href="https://facebook.com" className='icon' target="_blank" rel="noopener noreferrer">
           <FaFacebookF  />
