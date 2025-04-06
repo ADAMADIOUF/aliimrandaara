@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ 
+   --clr-primary-1:        #EAF0D8;
+--clr-primary-1-hover:  #dce4c4;  /* slightly darker */
+
+--clr-primary-2:        #8EA353;
+--clr-primary-2-hover:  #798c45;  /* slightly deeper green */
+
+--clr-primary-3:        #2D6B4F;
+--clr-primary-3-hover:  #245842;  /* deeper teal */
+
+--clr-primary-4:        #000610;
+--clr-primary-4-hover:  #1a1e29;  /* soft dark blue/gray */
+
+--clr-primary-5:        #D6A6AD;
+--clr-primary-5-hover:  #c98c94;  /* richer rose */
+
+--clr-primary-6:        #F7F4F8;
+--clr-primary-6-hover:  #e4dee7;  /* light lavender */
+
+--clr-primary-7:        #BFE2E6;
+--clr-primary-7-hover:  #a3cfd4;  /* soft aqua */
+
+  --clr-body:#FFFFFF;
+  --clr-white: #fff;
+  
+  --clr-black: #222;
+    --primary-font1: "Space Mono", monospace;
+  --primary-font2:  "Amiri Quran", serif;
+  --primary-font3:  "Noto Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  
+}
+
+
+
+body {
+  background: var(--clr-body);
+  color: var(--clr-black);
+  transition: var(--darkModeTransition);
+  font-family: var(--primary-font1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section-center {
+  width: 90vw;
+  margin: 1rem auto;
+  max-width: var(--max-width);
+  background: var(--clr-white);
+
+}
+.nav-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+
+}
+
+.title h3{
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-white);
+}
+.underline{
+  width: 10rem;
+  height: 1rem;
+  background: var(--clr-primary-8);
+  margin: 0 auto;
+}
+.btn {
+  background: var(--clr-primary-3);
+  color: var(--clr-black);
+  padding: 12px 30px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn::before {
+  top: 0;
+  left: 0;
+}
+
+.btn::after {
+  right: 0;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 100%;
+}
+
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-primary-3-hover);
+}
+/* Top Nav Wrapper */
+.top-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-primary-1);
+  padding: 0.5rem 1rem;
+  color: black;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+  font-family: 'Cairo', sans-serif;
+}
+
+.greeting-icon {
+  background-color: var(--clr-primary-2); /* dark green */
+  color: var(--clr-white);
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  
+}
+.greeting-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+
+.top-nav .social-icons {
+  display: flex;
+  gap: 0.75rem;
+ 
+}
+
+.top-nav .social-icons .icon {
+  color: var(--clr-white);
+  background-color: var(--clr-primary-2); 
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-nav .social-icons .icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  background-color: var(--clr-primary-2-hover); /* darker green on hover */
+}
+
+
+
+.second-top-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Cairo', sans-serif;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2D6B4F;
+}
+
+.whatsapp-icon {
+  font-size: 1.3rem;
+  color: #25D366;
+}
+
+.search input {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  width: 200px;
+  transition: 0.3s ease;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--clr-primary-3);
+  box-shadow: 0 0 0 2px rgba(45, 107, 79, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .second-top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
